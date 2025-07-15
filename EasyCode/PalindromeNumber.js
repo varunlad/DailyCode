@@ -13,7 +13,7 @@
     }
 
     if (rev === x) {
-        return true;
+        return true; 
     }
     else {
         return false;
