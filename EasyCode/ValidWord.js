@@ -72,7 +72,7 @@ function isValid(word) {
 
     return true;
 }
-
+ 
 console.log(isValid("234Adas"));     
 console.log(isValid("b13"));     
 console.log(isValid("a3$e"));   
