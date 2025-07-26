@@ -4,4 +4,4 @@ function smallestLargestNumber(arr) {
 }
 
 
-console.log(smallestLargestNumber([2, 1, 3, 4, 22, 3, 4, 5]));
+console.log(smallestLargestNumber([2, 1, 3, 4, 22, 3, 4, 5])); //[1,22]
