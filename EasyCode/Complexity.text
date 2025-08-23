@@ -1,0 +1,19 @@
+Algorithm : An algorithm is a clear, step-by-step set of instructions or rules designed to solve a specific problem
+ or perform a particular task.
+
+What is Complexity:
+ => Complexity describes the efficiency of an algorithm in terms of:
+ Time Complexity → How fast it runs (number of operations).
+ ---------------
+
+ Space Complexity → How much extra memory it uses.
+ ----------------
+  We don’t measure it in seconds or MB directly, but in growth rate relative to input size n.
+
+Big-O Notation:
+ We use Big-O to describe complexity in worst-case growth:
+ O(1) → Constant time → Doesn’t depend on n (e.g., direct formula lookup).
+ O(log n) → Logarithmic → Grows slowly (e.g., binary search).
+ O(n) → Linear → Grows directly with input size (e.g., single loop).
+ O(n²) → Quadratic → Grows much faster (e.g., nested loops).
+ O(2ⁿ) → Exponential → Grows explosively (e.g., brute-force recursion).
