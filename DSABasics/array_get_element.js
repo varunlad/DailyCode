@@ -15,4 +15,4 @@ function array_get_element(arr, value) {
   }
 }
 
-console.log(array_get_element([0, 4, 1, 2, 4, 3, 5], 4));
+console.log(array_get_element([0, 4, '4', 1, 2, 4, 3, 5], 4));
