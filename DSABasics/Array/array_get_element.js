@@ -1,18 +1,11 @@
-function array_get_element(arr, value) {
-  let isValue = false;
-  let occerenceValue = [];
-  ////Going through the array element one by one.
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] === value) {
-      isValue = true;
-      occerenceValue.push(value + " is present at " + i + " index.");
+function array_get_element(arr){
+    let traversedArr = [];
+    ////Going through the array element one by one.
+    for(let i=0; i<arr.length; i++){
+        traversedArr.push("Val :",arr[i]);
     }
-  }
-  if (isValue) {
-    return occerenceValue;
-  } else {
-    return value + " is not present.";
-  }
+
+    return traversedArr;
 }
 
-console.log(array_get_element([0, 4, '4', 1, 2, 4, 3, 5], 4));
+console.log(array_get_element([0,1,2,3,4,5]))
