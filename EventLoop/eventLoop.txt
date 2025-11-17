@@ -1,0 +1,15 @@
+The event loop controls how JavaScript handles asynchronous tasks — deciding whether code goes to:
+
+Call stack → executes immediately (synchronous)
+
+Microtask queue → e.g. Promise.then, async/await
+
+Macrotask queue → e.g. setTimeout, setInterval, setImmediate
+
+The event loop always:
+
+Runs all synchronous code first.
+
+Then handles microtasks (Promises).
+
+Then macrotasks (timeouts, etc.).
