@@ -1,15 +1,16 @@
+JavaScript is single-threaded and synchronous by default, but it supports asynchronous behavior through the event loop.
 The event loop controls how JavaScript handles asynchronous tasks — deciding whether code goes to:
-
+=============================================================
 Call stack → executes immediately (synchronous)
-
 Microtask queue → e.g. Promise.then, async/await
-
 Macrotask queue → e.g. setTimeout, setInterval, setImmediate
+=============================================================
 
 The event loop always:
+~~~~~~~~~~~~~~~~~~~~~
 
-Runs all synchronous code first.
+1. Runs all synchronous code first.(console.log)
+2. Then handles microtasks (Promises).
+3. Then macrotasks (timeouts, etc.).
 
-Then handles microtasks (Promises).
-
-Then macrotasks (timeouts, etc.).
+It’s responsible for managing and executing asynchronous tasks, callbacks, and I/O operations without blocking the main thread.
