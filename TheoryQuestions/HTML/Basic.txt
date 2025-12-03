@@ -1,0 +1,56 @@
+1.What are semantic HTML elements?
+  Elements that convey meaning: <header>, <footer>, <article>, <section>, <nav>. They improve accessibility and SEO.
+
+2.What is the purpose of the label tag?
+  Associates text with form controls for accessibility. Clicking the label focuses the input.
+  <label for="email">Email:</label>
+  <input type="email" id="email">
+
+3.What is the difference between <img> and CSS background images?
+  <img>: Semantic, part of content, indexed by search engines.
+  CSS background: Decorative, not part of content.  
+
+4.What are HTML5 new features?
+  Semantic tags: <header>, <footer>, <article>.
+  Multimedia: <audio>, <video>.
+  Form controls: email, date, range.
+  APIs: Canvas, Web Storage - local & session Storage, Geolocation.  
+  
+5.Difference between localStorage and sessionStorage?
+  localStorage: Persistent data, no expiry.
+  sessionStorage: Data cleared when tab closes.  
+
+6.What is the difference between inline, block, and inline-block elements?
+  inline: No line break, cannot set width/height.
+  block: Takes full width, starts on new line.
+  inline-block: Behaves like inline but allows width/height.
+
+7.How does HTML affect SEO?
+  Use semantic tags for structure.
+  Proper heading hierarchy (<h1> to <h6>).
+  alt attributes for images.
+  Meta tags (description, keywords).
+  Avoid hidden keyword stuffing.  
+
+8.What is ARIA in HTML?
+  Accessible Rich Internet Applications—attributes that improve accessibility for screen readers.
+  <button aria-label="Close menu">X</button>  
+  ARIA (Accessible Rich Internet Applications) attributes in HTML help screen readers interpret dynamic or complex UI elements that aren’t inherently accessible. 
+  For example:
+  role="button" tells the screen reader an element behaves like a button.
+  aria-label="Close menu" provides a descriptive label for an icon without visible text.
+  aria-live="polite" announces updates in real time.
+  blind users rely on ARIA attributes indirectly because screen readers use them to convey meaning and state changes. 
+  Without ARIA, many custom components (like modals, sliders, or dropdowns) would be confusing or invisible to assistive tech.
+
+9.How to improve HTML page performance?
+  Minimize HTML size.
+  Use semantic tags for clarity.
+  Lazy-load images.
+  Optimize scripts with async/defer.
+  Use CDN for assets.   
+
+10.What is the difference between meta charset="UTF-8" and others?
+   UTF-8 supports most characters globally, recommended for modern web pages.
+
+  

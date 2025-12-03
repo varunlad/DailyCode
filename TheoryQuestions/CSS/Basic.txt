@@ -1,0 +1,36 @@
+1.What is the CSS Box Model?
+  The box model describes how elements are rendered as boxes consisting of content, padding, border, and margin.
+  Total element size (with box-sizing: content-box) = width + padding + border + margin.
+
+2.What is the difference between display: none and visibility: hidden?
+  display: none removes the element from the layout (no space taken).
+  visibility: hidden hides it but it still occupies space.
+
+3.Explain CSS specificity.
+  Inline styles: 1000
+  IDs: 100
+  Classes/attributes/pseudo-classes: 10
+  Elements/pseudo-elements: 1
+  Higher score wins; later rules tie-break.   
+
+4.What are pseudo-classes vs pseudo-elements?
+  Pseudo-classes target states (e.g., :hover, :focus, :nth-child(2)).
+  Pseudo-elements target parts of elements (e.g., ::before, ::after, ::first-line).
+
+5.Difference between em, rem, px, %, vh, vw?
+  em: relative to the element’s font-size (cumulative).
+  rem: relative to root (html) font-size.
+  px: absolute pixel.
+  %: relative to parent property (e.g., width of parent).
+  vh/vw: viewport height/width percentages.  
+
+6.When use Flexbox vs Grid?
+  Flexbox: one-dimensional (row or column), great for nav bars, buttons.
+  Grid: two-dimensional, ideal for complex page layouts.  
+
+7.Explain position: static | relative | absolute | fixed | sticky.
+  static: default, flow.
+  relative: offset from its normal position, establishes containing block for absolute children.
+  absolute: positioned relative to nearest positioned ancestor.
+  fixed: relative to viewport.
+  sticky: toggles between relative and fixed based on scroll.
