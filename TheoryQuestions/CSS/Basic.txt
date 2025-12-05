@@ -6,7 +6,7 @@
   display: none removes the element from the layout (no space taken).
   visibility: hidden hides it but it still occupies space.
 
-3.Explain CSS specificity.
+3.Explain CSS specificity. 
   Inline styles: 1000
   IDs: 100
   Classes/attributes/pseudo-classes: 10
