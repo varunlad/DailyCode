@@ -1,0 +1,66 @@
+What’s New in React 19 Compared to React 18?
+
+1. React Compiler
+What it is: React 19 introduces an automatic optimization system called the React Compiler. Previously, developers had to manually optimize performance, 
+            often using useMemo, useCallback, and memo to prevent unnecessary re-renders.
+What it does: Automatically optimizes your React code at build time for better performance.
+Why it matters: You don’t need to manually tweak performance; the compiler handles it.
+Benefit: Faster apps without extra developer effort.
+
+2. Server Components
+What it is: Server Components allow you to render parts of your React application on the server, sending only the necessary HTML and data to the client. 
+            This is a shift from the traditional client-side rendering model of React.
+What changed: Server Components were experimental in React 18 now they’re fully supported.
+Why it matters: You can render parts of your UI on the server, reducing JavaScript sent to the client.
+Benefits:
+  Faster initial page loads
+  Better SEO
+  Easier data fetching on the server side.
+
+3. Actions API
+What it is: Actions simplify handling form submissions and data mutations. They provide a standardized way to interact with server-side logic directly from your components, 
+            without needing to manually manage fetch calls and state updates
+Purpose: Simplifies handling async mutations (like form submissions).
+Benefit: Cleaner code for async state updates and form handling.
+
+4. Built-in Document Metadata Support
+What it does: Lets you manage <title>, <meta> tags directly in React.
+These are important for SEO, social previews, and accessibility
+Benefit: No need for external libraries like react-helmet.
+Before React 19 it didn’t have a built-in way to manage metadata.
+Developers used third-party libraries like: react-helmet, next/head (in Next.js)
+
+5. Concurrent Rendering Improvements
+What is Concurrent Rendering? Normally, React updates the UI synchronously: it blocks everything until the update is done.
+Concurrent Rendering allows React to pause, resume, and prioritize rendering tasks instead of doing everything at once.
+This means React can keep the UI responsive even when there’s heavy work happening.
+React 18 introduced: Concurrent rendering and Suspense.
+React 19 adds:
+  Better server-side Suspense
+  More efficient batching of updates (even async ones like setTimeout or promises).
+Benefit: Smoother UI, fewer unnecessary renders.
+
+6. Enhanced DevTools
+What’s new: Better debugging experience, performance tracking integrated into browser DevTools.
+
+7. New Hook: useActionState
+React 19 introduces a new hook, useActionState, specifically designed to simplify handling data mutations and state updates within Actions. 
+It simplify the process by managing the pending state and returning the final result of the action.
+Key Features
+  Manages Pending State: useActionState automatically tracks the pending state during an action, eliminating the need for manual handling in your components.
+  Returns Result and Pending State: The hook returns an array containing two values: the final result of the action (e.g., error message or success data),
+  and a boolean indicating whether the action is still pending.
+  Composes Actions: Actions can be composed, meaning multiple actions can be chained together. useActionState handles the execution order and final state update.
+
+8. New Hook: useFormStatus
+React 19 introduces a new hook, useFormStatus, designed to access to information about the parent form within child components. 
+This is particularly helpful in design systems where components need to interact with the form's state without extensive prop drilling.
+
+Improvements in React 19
+1.Diffs for Hydration Errors
+We made it easier to spot mistakes in React by improving how errors are reported. Before, it would just show a bunch of errors without explaining what went wrong.
+Now, it shows one clear message with details about what's different.
+
+2. Ref as a Prop
+React 19 introduces a significant improvement for refs: you can now pass them as props to functional components.
+This eliminates the need for the forwardRef higher-order component (HOC) in most cases.
