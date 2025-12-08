@@ -1,0 +1,102 @@
+What is ES6 (ECMAScript 2015)
+
+ES6 is the 2015 version of the ECMAScript standard that introduced major JavaScript features—making JS more readable, modular, and powerful.
+Many of the features you use daily (like let/const, arrow functions, destructuring, modules, promises) come from ES6.
+
+Key benefits: block scoping, better syntax for functions and objects, native modules, asynchronous programming, new data structures.
+
+Important ES6 Interview Q&A (with examples)
+
+1) Difference between var, let, const?
+⦁  var: function-scoped, hoisted with initialization to undefined.
+⦁  let/const: block-scoped, hoisted but TDZ (Temporal Dead Zone) until declared.
+⦁  const defines immutable binding, not value.  
+
+2) What is the Temporal Dead Zone?
+Period between entering scope and the let/const declaration where the variable cannot be accessed.
+
+3) Arrow function vs regular function this?
+Arrow functions capture this from the surrounding lexical scope; regular functions have dynamic this based on call site
+
+4) Can you use arrow functions as constructors?
+No.
+const A = () => {};
+// new A(); // TypeError: A is not a constructor
+
+5) How do default parameters evaluate?
+Defaults are evaluated at call time, left-to-right.
+function f(a, b = a + 1) { return b; }
+f(2); // 3
+
+6) Explain rest vs spread.
+⦁  Rest ...args collects arguments into an array in function parameters.
+⦁  Spread ...arr expands an iterable/object in expressions.
+
+
+7) Is object spread ... deep clone?
+
+No—shallow copy.
+const a = { nested: { x: 1 } };
+const b = { ...a };
+b.nested.x = 2;
+
+8) How does destructuring with defaults work?
+Default applies only if the value is undefined, not other falsy values.
+const [x = 1] = [undefined]; // 1
+
+9) What is the iterator protocol?
+An object implements .next() returning { value, done }. Iterables implement Symbol.iterator.
+
+const iterable = {
+  Symbol.iterator {
+    let i = 0;
+    return { next: () => ({ value: i++, done: i > 3 }) };
+  }
+};
+
+10) Difference: for...of vs for...in?
+⦁  for...of: iterates values of an iterable (arrays, strings, maps).
+⦁  for...in: iterates enumerable keys (including inherited) of objects.
+
+11) How does Map differ from plain objects?
+⦁  Keys can be any type, including objects.
+⦁  Maintains insertion order; has size; clean API: set/get/has/delete.
+const m = new Map();
+const key = {};
+m.set(key, 1);
+
+12) What makes WeakMap/WeakSet special?
+⦁  Keys must be objects; references are weak (no memory leaks).
+⦁  Not enumerable (no .keys() or iteration).
+
+13) Microtasks vs macrotasks
+⦁  Promise callbacks (then/catch/finally) run in microtask queue.
+⦁  setTimeout runs in macrotask queue.
+
+14) Async/Await error handling
+
+async function f() {
+  try { await Promise.reject('err'); }
+  catch (e) { return 'handled'; }
+}
+f().then(console.log); // 'handled'
+
+15) Promise chaining & errors
+
+Promise.resolve(1)
+  .then(v => v + 1)
+  .then(v => { throw new Error('x'); })
+  .catch(e => 0)
+  .then(v => v + 1); // 1
+
+Tips for Frontend Devs (React/Vue/Modern Bundlers)
+⦁  Prefer const by default; use let only when you reassign.
+⦁  Arrow functions for callbacks and to preserve this in class components.
+⦁  Use destructuring to keep code clean (props, state).
+⦁  Rely on modules; avoid globals.
+⦁  Use async/await for readable async code; add try/catch.
+⦁  Be mindful of bundle targets; transpile with Babel if supporting older browsers.
+
+
+
+ 
