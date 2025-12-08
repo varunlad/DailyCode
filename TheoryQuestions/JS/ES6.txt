@@ -10,7 +10,7 @@ Important ES6 Interview Q&A (with examples)
 1) Difference between var, let, const?
 ⦁  var: function-scoped, hoisted with initialization to undefined.
 ⦁  let/const: block-scoped, hoisted but TDZ (Temporal Dead Zone) until declared.
-⦁  const defines immutable binding, not value.  
+⦁  const defines immutable binding, not value.   
 
 2) What is the Temporal Dead Zone?
 Period between entering scope and the let/const declaration where the variable cannot be accessed.
