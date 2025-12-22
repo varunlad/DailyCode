@@ -1,0 +1,39 @@
+1. What is the difference between HTTP and HTTPS?
+Answer:
+HTTP (HyperText Transfer Protocol) is used for communication between client and server but is not encrypted.
+HTTPS adds SSL/TLS encryption, ensuring data confidentiality and integrity. It also provides authentication via certificates.
+SSL/TLS stands for Secure Sockets Layer and Transport Layer Security. They are cryptographic protocols that provide secure communication over a network.
+
+2.  What is CORS and why is it needed?
+Answer:
+Cross-Origin Resource Sharing allows controlled access to resources from different domains, preventing unauthorized requests.
+
+3. Explain CSRF and XSS attacks.
+Answer:
+CSRF: Exploits user’s authenticated session to perform unwanted actions.
+XSS: Injects malicious scripts into web pages.
+Prevention: Use tokens, input sanitization, CSP headers.
+
+4. What are secure HTTP headers?
+Answer:
+Content-Security-Policy
+X-Frame-Options
+Strict-Transport-Security
+
+5. Explain OAuth and JWT.
+Answer:
+OAuth: Authorization protocol for third-party access.
+JWT: JSON Web Token for stateless authentication.
+
+6. What is HTTPS certificate pinning?
+Answer:
+Associates a specific certificate with an app to prevent MITM attacks.
+(MITM stands for Man-in-the-Middle attack.)
+(A MITM attack occurs when an attacker secretly intercepts and possibly alters communication between two parties
+(e.g., a user and a website) without them knowing. The attacker acts as a "middleman" between the client and server.)
+
+7. How to prevent MITM attacks?
+Answer:
+Use HTTPS everywhere.
+Enable HSTS.
+Validate certificates.
