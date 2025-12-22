@@ -7,7 +7,7 @@ What it does: Automatically optimizes your React code at build time for better p
 Why it matters: You don’t need to manually tweak performance; the compiler handles it.
 Benefit: Faster apps without extra developer effort.
 
-2. Server Components
+2. Server Components 
 What it is: Server Components allow you to render parts of your React application on the server, sending only the necessary HTML and data to the client. 
             This is a shift from the traditional client-side rendering model of React.
 What changed: Server Components were experimental in React 18 now they’re fully supported.
