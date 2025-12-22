@@ -1,10 +1,11 @@
 1. What is the difference between HTTP and HTTPS?
 Answer:
 HTTP (HyperText Transfer Protocol) is used for communication between client and server but is not encrypted.
+ex: If I inspect and simply change the password input type from password to text then password will be visible.
 HTTPS adds SSL/TLS encryption, ensuring data confidentiality and integrity. It also provides authentication via certificates.
 SSL/TLS stands for Secure Sockets Layer and Transport Layer Security. They are cryptographic protocols that provide secure communication over a network.
 
-2.  What is CORS and why is it needed?
+2. What is CORS and why is it needed?
 Answer:
 Cross-Origin Resource Sharing allows controlled access to resources from different domains, preventing unauthorized requests.
 
