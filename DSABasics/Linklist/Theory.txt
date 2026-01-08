@@ -28,7 +28,7 @@ Another nice thing with linked lists is that when adding or removing nodes, the 
 
 
 Types of Linked Lists :
----------------------
+--------------------- 
 
 1. Singly linked lists
 2. Doubly linked lists
