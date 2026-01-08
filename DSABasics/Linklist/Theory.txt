@@ -1,0 +1,35 @@
+Linked List Data Structure
+--------------------------
+
+----
+A Linked List is, as the word implies, a list where the nodes are linked together. Each node contains data and a pointer. 
+The way they are linked together is that each node points to where in the memory the next node is placed.
+----
+
+Linked lists consist of nodes, and is a linear data structure we make ourselves, 
+unlike arrays which is an existing data structure in the programming language that we can use.
+
+A node contains two things first is data and second is a link that connects it with another node.
+The first node is called the head node and we can traverse the whole list using this head and next links.
+
+The last node of the linklist is called as tail and it points to null.
+
+----
+A Linked List is, as the word implies, a list where the nodes are linked together. Each node contains data and a pointer. 
+The way they are linked together is that each node points to where in the memory the next node is placed.
+----
+
+Advantage over Array :
+--------------------
+
+A big benefit with using linked lists is that nodes are stored wherever there is free space in memory, 
+the nodes do not have to be stored contiguously right after each other like elements are stored in arrays. 
+Another nice thing with linked lists is that when adding or removing nodes, the rest of the nodes in the list do not have to be shifted.
+
+
+Types of Linked Lists :
+---------------------
+
+1. Singly linked lists
+2. Doubly linked lists
+3. Circular linked lists
