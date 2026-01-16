@@ -5,4 +5,5 @@ for(let i=0; i<myArr.length; i++){
 }
 return myObj;
 }
+
 console.log(arrayToObject([["name", "Varun"], ["age", 25]]));

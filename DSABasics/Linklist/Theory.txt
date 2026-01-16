@@ -14,6 +14,7 @@ The first node is called the head node and we can traverse the whole list using 
 
 The last node of the linklist is called as tail and it points to null.
 
+
 ----
 A Linked List is, as the word implies, a list where the nodes are linked together. Each node contains data and a pointer. 
 The way they are linked together is that each node points to where in the memory the next node is placed.
