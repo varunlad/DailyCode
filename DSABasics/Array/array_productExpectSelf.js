@@ -7,6 +7,7 @@ function productExpectSelf(arr) {
         product *= arr[j];
       }
     }
+    
     result.push(product);
   }
 
