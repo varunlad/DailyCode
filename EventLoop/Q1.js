@@ -1,8 +1,4 @@
 console.log("A");
-setTimeout(() => console.log("B"), 0);
+setTimeout(() => console.log("B"), 0); ///macro
 console.log("C");
-
-// A
-// C
-// B
 

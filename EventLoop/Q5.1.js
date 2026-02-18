@@ -10,7 +10,4 @@ demo();
 
 console.log("End");
 
-// Start
-// Start of function
-// End of function
-// End
+////JS execution order : Call stack → Microtasks → Macrotasks
