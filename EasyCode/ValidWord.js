@@ -74,5 +74,5 @@ function isValid(word) {
 }
  
 console.log(isValid("234Adas"));     
-console.log(isValid("b13"));     
+console.log(isValid("b1"));     
 console.log(isValid("a3$e"));   
