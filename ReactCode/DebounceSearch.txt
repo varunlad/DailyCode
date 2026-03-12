@@ -1,0 +1,20 @@
+ import React, {useState, useEffect, useRef, useCallback} from 'react';
+import './styles.css'
+export default function App(){
+
+const[search, setSearch] = useState('');
+const[debounceSearch, setDebounceSearch] = useState('');
+    useEffect(()=>{
+       let debounce =  setTimeout(()=>{
+            setDebounceSearch(search);
+        },1000);
+        return () =>{clearTimeout(debounce)}
+    },[search])
+    
+    return(
+        <div className='main_container'>
+     <input placeholder='search' onChange={(e)=>{setSearch(e.target.value)}} type='text' value={search} />
+            {debounceSearch}
+        </div>
+    )
+}
