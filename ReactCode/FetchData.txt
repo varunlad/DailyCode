@@ -1,0 +1,39 @@
+ import React, {useState, useEffect, useRef, useCallback} from 'react';
+import './styles.css'
+export default function App(){
+
+const [data, setData] = useState([]);
+const[copyData, setCopyData] = useState([]);
+const[search, setSearch] = useState('');
+const fetchData = () =>{
+    fetch('https://jsonplaceholder.typicode.com/users')
+    .then(response => response.json())
+    .then(res => {
+        setData(res);
+        setCopyData(res)
+    } )
+}
+ 
+  const handelSearch = (val) =>{
+        setSearch(val);
+        let filter = copyData.filter((ele)=> ele.name.toUpperCase().includes(val.toUpperCase()));
+        setData(filter);
+    }
+    
+    useEffect(()=>{
+        fetchData()
+    },[])
+    
+    return(
+        <div className='main_container'>
+            <input onChange={(e)=>{handelSearch(e.target.value)}} type='text' placeholder ='search' value={search}/>
+            {data.length > 0 ? data.map((ele, ind) => {
+                return(
+            <>
+                <p>{ele.name}</p>
+                <p>{ele.email}</p>
+            </>
+            )}) : 'No search result found'}
+        </div>
+    )
+}
