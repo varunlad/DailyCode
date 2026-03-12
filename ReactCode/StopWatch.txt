@@ -1,0 +1,34 @@
+ import React, {useState, useEffect, useRef, useCallback} from 'react';
+import './styles.css'
+export default function App(){
+
+const[counter, setCounter] = useState(0) ;
+const[isRunning, setIsRunning] = useState(false)
+const timerRef = useRef(null);
+const handelStart = () =>{
+    if(isRunning) {return}
+    setIsRunning(true);
+   timerRef.current = setInterval(()=>{
+        setCounter((prev) => prev +1);
+    },1000)
+}
+    const handelPause = () =>{
+    setIsRunning(false);
+              clearInterval(timerRef.current);  
+
+}
+    const handelStop = () =>{
+    setCounter(0);
+        setIsRunning(false);
+      clearInterval(timerRef.current);  
+}
+    
+    return(
+        <div className='main_container'>
+            {counter}
+          <button onClick={handelStart}>Start</button>
+          <button  onClick={handelPause}>Pause</button>
+          <button  onClick={handelStop}>Stop</button>
+        </div>
+    )
+}
